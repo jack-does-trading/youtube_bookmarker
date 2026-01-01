@@ -20,7 +20,7 @@ A Chrome browser extension that allows you to bookmark YouTube videos with times
 If you have the project files, make sure they're in a folder on your computer. If you're cloning from a repository:
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/jack-does-trading/youtube_bookmarker.git>
 cd bookmark
 ```
 
@@ -41,20 +41,24 @@ npm run build
 ```
 
 This will:
+
 - Compile all TypeScript files from `src/` to `dist/`
 - Copy the CSS file to the `dist/` folder
 
 ### Step 4: Load the Extension in Chrome
 
 1. **Open Chrome Extensions Page**:
+
    - Open Google Chrome
    - Navigate to `chrome://extensions/`
    - Or go to: **Menu (⋮) → Extensions → Manage Extensions**
 
 2. **Enable Developer Mode**:
+
    - Toggle the **"Developer mode"** switch in the top-right corner
 
 3. **Load the Extension**:
+
    - Click **"Load unpacked"** button
    - Select the `bookmark` folder (the root folder containing `manifest.json`)
    - Click **"Select Folder"**
@@ -137,7 +141,7 @@ bookmark/
 
 1. **Make Changes**: Edit files in the `src/` directory
 2. **Rebuild**: Run `npm run build` (or use `npm run watch` for auto-rebuild)
-3. **Reload Extension**: 
+3. **Reload Extension**:
    - Go to `chrome://extensions/`
    - Click the **refresh icon** on the YouTube Bookmarker extension card
 4. **Test**: Navigate to YouTube and test your changes
@@ -155,7 +159,7 @@ bookmark/
 ### Technologies Used
 
 - **TypeScript**: Type-safe JavaScript development
-- **Chrome Extension APIs**: 
+- **Chrome Extension APIs**:
   - `chrome.storage.sync` for cloud-synced storage
   - `chrome.runtime` for extension communication
   - `chrome.scripting` for content script injection
@@ -172,6 +176,7 @@ bookmark/
 ### Storage
 
 Bookmarks are stored using Chrome's `storage.sync` API, which:
+
 - Syncs across all devices where you're signed into Chrome
 - Has a limit of 100KB per extension
 - Automatically handles conflicts and updates
@@ -179,6 +184,7 @@ Bookmarks are stored using Chrome's `storage.sync` API, which:
 ### Permissions
 
 The extension requires:
+
 - **`storage`**: To save and retrieve bookmarks
 - **`activeTab`**: To access the current YouTube tab
 - **`scripting`**: To inject the content script into YouTube pages
@@ -226,4 +232,3 @@ If you encounter any issues or have questions, please open an issue on the repos
 ---
 
 **Made with ❤️ for YouTube enthusiasts**
-
